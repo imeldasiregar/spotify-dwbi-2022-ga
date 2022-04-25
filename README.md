@@ -1,1 +1,2 @@
 # spotify-dwbi-2022-ga
+Spotify memproses banyak data karena berbagai alasan, termasuk pelaporan bisnis, rekomendasi musik, penayangan iklan, dan wawasan artis. Miliaran aliran disajikan di 61 pasar yang berbeda dan ribuan trek baru ditambahkan ke katalog setiap hari. Untuk menangani aliran data yang sangat besar ini, Spotify memiliki ~2500 node cluster Apache Hadoop di lokasi, salah satu penerapan terbesar di Eropa, yang menjalankan lebih dari 20 ribu pekerjaan sehari.

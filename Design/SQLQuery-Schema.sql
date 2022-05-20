@@ -20,6 +20,9 @@ CREATE TABLE spotify.DimAlbum (
    name  varchar(255)   NOT NULL,
    album_type varchar(255) NOT NULL,
    release_date  date NOT NULL,
+   version int NOT NULL,
+   date_from datetime NOT NULL,
+   date_to datetime NOT NULL,
    CONSTRAINT [PK_spotify.DimAlbum] PRIMARY KEY ( AlbumKey )
 ) ON [PRIMARY];
 GO
@@ -31,6 +34,9 @@ CREATE TABLE spotify.DimArtist (
    name_artist  varchar(255)   NOT NULL,
    genre_artist varchar(255) NOT NULL,
    followers int NOT NULL,
+   version int NOT NULL,
+   date_from datetime NOT NULL,
+   date_to datetime NOT NULL,
    CONSTRAINT [PK_spotify.DimArtist] PRIMARY KEY ( ArtistKey )
 ) ON [PRIMARY];
 GO
@@ -38,8 +44,10 @@ GO
 --Genres Dimension
 CREATE TABLE spotify.DimGenre (
    GenreKey  int   NOT NULL,
-   id_Genres  varchar(255)   NULL,
    name_Genres  varchar(255)   NOT NULL,
+   version int NOT NULL,
+   date_from datetime NOT NULL,
+   date_to datetime NOT NULL,
    CONSTRAINT [PK_spotify.DimGenre] PRIMARY KEY ( GenreKey)
 ) ON [PRIMARY];
 GO
@@ -55,6 +63,9 @@ CREATE TABLE spotify.FactTracks (
    preview_url varchar(255)   NOT NULL,
    duration int NOT NULL,
    track_number int NOT NULL,
+   version int NOT NULL,
+   date_from datetime NOT NULL,
+   date_to datetime NOT NULL,
    CONSTRAINT [PK_spotify.FactTracks] PRIMARY KEY ( TrackKey, AlbumKey, ArtistKey, GenreKey),
    CONSTRAINT [FK_spotify_FactTracks_AlbumKey] FOREIGN KEY (AlbumKey)
 		REFERENCES spotify.DimAlbum(AlbumKey),

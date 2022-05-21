@@ -9,17 +9,17 @@ Spotify memproses banyak data karena berbagai alasan, termasuk pelaporan bisnis,
 Top Track Reporting adalah salah satu fitur yang disediakan oleh spotify berupa tangga lagu yang dimana akan diupdate secara berkala berdasarkan popularitas lagu, genre, atau mood. Top Track spotify dapat dilihat dengan masuk ke spotify kemudian memilih playlist top track. 
 
 #### Atribut dan Metrik
-Dimension/Fact Table :
++ Dimension/Fact Table :
 1. Dimension Albums
 2. Dimension Artists
 3. Fact Tracks
 4. Dimension Genres
 
-Fact Grain Type : Periodic Snapshot
++ Fact Grain Type : Periodic Snapshot
 
-Granularity : one row per popularity track
++ Granularity : one row per popularity track
 
-Facts : Most popular track, album with the most popular track, artist with the most popular track
++ Facts : Most popular track, album with the most popular track, artist with the most popular track
 
 ## Data Source
 https://www.kaggle.com/datasets/maltegrosse/8-m-spotify-tracks-genre-audio-features 
